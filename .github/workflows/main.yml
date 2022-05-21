@@ -32,6 +32,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - run: npm ci
     - name: Deploy to production server
       uses: easingthemes/ssh-deploy@main
       env:
